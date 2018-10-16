@@ -5,11 +5,12 @@ type Props = {
   // onLinkSelect: (id: number) => void,
 }
 
-const Route404 = (props: Props) =>
+const Route404 = (props: Props) => (
   <PageTemplate>
-    <section className="content">
+    <section className='content'>
       <h1>404</h1>
     </section>
   </PageTemplate>
+);
 
 export default Route404;

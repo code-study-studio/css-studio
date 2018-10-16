@@ -3,19 +3,27 @@ import React from 'react';
 import MainMenu from '../MainMenu/MainMenu';
 
 type Props = {
-  children: React$Element<*>
+  children: React.ChildrenArray<React.Element>
 }
 
-const PageTemplate = ({children}: Props) =>
+const PageTemplate = ({children}: Props) => (
   <div className='wrapper'>
     <header className='header'>
-      <MainMenu />
+      <div className='container'>
+        <MainMenu />
+      </div>
     </header>
     <main className='main'>
-      {children}
+      <div className='container'>
+        {children}
+      </div>
     </main>
     <footer className='footer'>
+      <div className='container'>
+        footer
+      </div>
     </footer>
   </div>
+);
 
-export  default PageTemplate;
+export default PageTemplate;

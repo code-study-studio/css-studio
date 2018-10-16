@@ -2,21 +2,23 @@
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './MainMenu.scss';
 
 type Props = {
   // onLinkSelect: (id: number) => void,
 }
 
 const selectedStyle = {
-backgroundColor: "white",
-color: "slategray"
-}
+  backgroundColor: 'white',
+  color: 'slategray',
+};
 
-const MainMenu = (props: Props) =>
+const MainMenu = (props: Props) => (
   <nav className='menu'>
-    <NavLink to='/' activeStyle={selectedStyle}>
+    <NavLink activeStyle={selectedStyle} to='/'>
       [Home]
     </NavLink>
   </nav>
+);
 
 export default MainMenu;

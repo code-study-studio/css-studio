@@ -9,12 +9,12 @@ const devMode = process.env.NODE_ENV !== 'production';
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
-    app: './js/index.js'
+    app: './js/index.js',
   },
   output: {
     filename: 'assets/scripts/[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
-    //publicPath: '/'
+    // publicPath: '/'
   },
   optimization: {
     runtimeChunk: 'single',
@@ -23,12 +23,12 @@ module.exports = {
         common: {
           name: 'common',
           chunks: 'initial',
-          minChunks: 2
+          minChunks: 2,
         },
         vendors: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
-          chunks: 'all'
+          chunks: 'all',
         },
         // styles: {
         //   name: 'styles',
@@ -38,19 +38,19 @@ module.exports = {
         //   reuseExistingChunk: true,
         //   enforce: true,
         // },
-      }
-    }
+      },
+    },
   },
   resolve: {
-    extensions: ['.jsx', '.js', '.json']
+    extensions: ['.jsx', '.js', '.json'],
   },
   plugins: [
     new HtmlWebpackPlugin({
       inject: false,
       template: require('html-webpack-template'),
       appMountId: 'root',
-      //baseHref: 'http://example.com/awesome',
-      //devServer: 'http://localhost:3001',
+      // baseHref: 'http://example.com/awesome',
+      // devServer: 'http://localhost:3001',
       // googleAnalytics: {
       //   trackingId: 'UA-XXXX-XX',
       //   pageViewOnLoad: true
@@ -58,8 +58,8 @@ module.exports = {
       meta: [
         {
           name: 'description',
-          content: 'A better default template for html-webpack-plugin.'
-        }
+          content: 'A better default template for html-webpack-plugin.',
+        },
       ],
       mobile: true,
       lang: 'en-US',
@@ -68,29 +68,29 @@ module.exports = {
         {
           href: '/apple-touch-icon.png',
           rel: 'apple-touch-icon',
-          sizes: '180x180'
+          sizes: '180x180',
         },
         {
           href: '/favicon-32x32.png',
           rel: 'icon',
           sizes: '32x32',
-          type: 'image/png'
-        }
+          type: 'image/png',
+        },
       ],
-      //inlineManifestWebpackName: 'webpackManifest',
-      //scripts: [
+      // inlineManifestWebpackName: 'webpackManifest',
+      // scripts: [
       // 'http://example.com/somescript.js',
       // {
       //   src: '/myModule.js',
       //   type: 'module'
       // }
-      //],
+      // ],
       title: 'My App',
       window: {
         env: {
-          apiHost: 'http://myapi.com/api/v1'
-        }
-      }
+          apiHost: 'http://myapi.com/api/v1',
+        },
+      },
     }),
     new CleanWebpackPlugin(['dist']),
     new webpack.HotModuleReplacementPlugin(),
@@ -99,8 +99,8 @@ module.exports = {
       filename: devMode ?
         'assets/styles/[name].css' : 'assets/styles/[name].[hash].css',
       chunkFilename: devMode ?
-        'assets/styles/[id].css' : 'assets/styles/[id].[hash].css'
-    })
+        'assets/styles/[id].css' : 'assets/styles/[id].[hash].css',
+    }),
   ],
   module: {
     rules: [
@@ -109,7 +109,7 @@ module.exports = {
         exclude: /(node_modules)/,
         use: ['babel-loader'],
       },
-      { enforce: "pre", test: /\.js$/, loader: 'source-map-loader' },
+      { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
@@ -118,15 +118,15 @@ module.exports = {
             options: {
               publicPath: '../../',
               name: 'assets/images/[name].[ext]',
-            }
-          }
-        ]
+            },
+          },
+        ],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
-          'file-loader'
-        ]
+          'file-loader',
+        ],
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -136,7 +136,7 @@ module.exports = {
           'postcss-loader',
           'sass-loader',
         ],
-      }
-    ]
-  }
+      },
+    ],
+  },
 };

@@ -210,7 +210,7 @@
     "import/no-unresolved": 2,
     "import/unambiguous": 0,
     "import/prefer-default-export": 0,
-
+    "import/no-extraneous-dependencies": 0,
     "prefer-object-spread/prefer-object-spread": 2,
 
     "jest/no-disabled-tests": 1,
