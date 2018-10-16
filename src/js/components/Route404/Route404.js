@@ -1,5 +1,5 @@
 import React from 'react';
-import PageTemplate from '../PageTemplate/PageTemplate.js';
+import PageTemplate from '../containers/PageTemplate/PageTemplate.js';
 
 type Props = {
   // onLinkSelect: (id: number) => void,

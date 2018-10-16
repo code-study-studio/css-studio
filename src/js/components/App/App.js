@@ -3,10 +3,10 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Route, Switch } from 'react-router-dom';
-import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
+import ErrorBoundary from '../containers/ErrorBoundary/ErrorBoundary';
 import Home from '../Home/Home';
+import About from '../About/About';
 import Route404 from '../Route404/Route404';
-//import './App.scss';
 
 class App extends Component<{}> {
   render() {
@@ -14,6 +14,7 @@ class App extends Component<{}> {
       <ErrorBoundary>
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path='/about' component={About} />
           <Route component={Route404} />
         </Switch>
       </ErrorBoundary>

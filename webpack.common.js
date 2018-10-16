@@ -132,7 +132,13 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              importLoaders: 2,
+              modules: true,
+            },
+          },
           'postcss-loader',
           'sass-loader',
         ],

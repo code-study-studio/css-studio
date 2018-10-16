@@ -3,3 +3,12 @@
 .menu {
   background: $color-layout;
 }
+
+.menu__link {
+
+}
+
+.menu__link--active {
+  backgroundColor: 'red';
+  color: $color-active-link;
+}

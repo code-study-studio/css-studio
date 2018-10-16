@@ -10,6 +10,11 @@ exports[`App should render correctly 1`] = `
     />
     <Route
       component={[Function]}
+      exact={true}
+      path="/about"
+    />
+    <Route
+      component={[Function]}
     />
   </Switch>
 </ErrorBoundary>

@@ -13,26 +13,10 @@ $color-title: #7E157C;
 $color-base-backgound: #FAFAFA;
 $color-backlink: #DC98DB;
 $color-white: #fff;
-
+$color-active-link: #B72E43;
 
 $title-font: 'Conv_Nefelibata-SansCanvas', sans-serif;
 $subtitle-font: 'Conv_PT_Serif-Web-Bold', sans-serif;
 $base-font: 'Conv_PT_Serif-Web-Regular', serif;
 $link-font: 'Conv_Neucha', arial;
 
-// ----------------------------------- base --------------------------------//
-
-* {
-  box-sizing: border-box;
-}
-
-.container {
-  max-width: rem(1100px);
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  position: relative;
-  height: 100%;
-}

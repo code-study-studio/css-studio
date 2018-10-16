@@ -2,21 +2,24 @@
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './MainMenu.scss';
+import classNames from 'classnames/bind';
+import styles from './MainMenu.scss';
+
+const cx = classNames.bind(styles);
 
 type Props = {
   // onLinkSelect: (id: number) => void,
 }
 
-const selectedStyle = {
-  backgroundColor: 'white',
-  color: 'slategray',
-};
+const selectedStyle = cx('menu__link', 'menu__link--active');
 
 const MainMenu = (props: Props) => (
-  <nav className='menu'>
-    <NavLink activeStyle={selectedStyle} to='/'>
+  <nav className={styles.menu}>
+    <NavLink to='/' exact activeClassName={selectedStyle}>
       [Home]
+    </NavLink>
+    <NavLink activeClassName={selectedStyle} to='/about'>
+      [About]
     </NavLink>
   </nav>
 );
