@@ -1,14 +1,65 @@
-@import '../../../styles/set.scss';
+@import '../../../styles/mixins.scss';
 
-.menu {
-  background: $color-layout;
+
+.topmenu {
+  margin: 0 rem(10px);
+
+  @include s-phone() {
+    margin: rem(10px) rem(10px);
+  }
 }
 
-.menu__link {
+.link {
+  font-family: var(--font-title);
+  font-size: rem(18px);
+  margin-right: rem(80px);
+  text-transform: uppercase;
+  color: var(--color-link);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-active-link);
+  }
+
+  &:active {
+    color: var(--color-active-link);
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablet() {
+    margin-right: rem(35px);
+  }
+
+  @include phone() {
+    font-size: rem(16px);
+    margin-right: rem(20px);
+  }
+
+  @include s-phone() {
+    margin: rem(10px);
+  }
 
 }
 
-.menu__link--active {
-  backgroundColor: 'red';
-  color: $color-active-link;
+.active {
+  color: var(--color-active-link);
+  position: relative;
+
+  &:before {
+    content: '[ ';
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: -7px;
+  }
+  &:after {
+    content: ' ]';
+    display: block;
+    position: absolute;
+    top: -1px;
+    right: -7px;
+  }
 }

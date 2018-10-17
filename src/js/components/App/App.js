@@ -9,6 +9,11 @@ import About from '../About/About';
 import Route404 from '../Route404/Route404';
 
 class App extends Component<{}> {
+
+  fn = () => {
+    return new Promise();
+  }
+
   render() {
     return (
       <ErrorBoundary>

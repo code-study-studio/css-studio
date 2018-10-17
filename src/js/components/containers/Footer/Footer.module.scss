@@ -1,4 +1,8 @@
-@import '../../../../styles/set';
+@import '../../../../styles/mixins';
+
+.footer {
+  background-color: var(--color-footer-layout);
+}
 
 .container {
   max-width: rem(1100px);

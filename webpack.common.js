@@ -14,7 +14,7 @@ module.exports = {
   output: {
     filename: 'assets/scripts/[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
-    // publicPath: '/'
+    //publicPath: '/'
   },
   optimization: {
     runtimeChunk: 'single',
@@ -55,28 +55,27 @@ module.exports = {
       //   trackingId: 'UA-XXXX-XX',
       //   pageViewOnLoad: true
       // },
-      meta: [
-        {
-          name: 'description',
-          content: 'A better default template for html-webpack-plugin.',
-        },
-      ],
+      meta: {
+        'description': {'content': 'A better default template for html-webpack-plugin.'}
+      },
       mobile: true,
       lang: 'en-US',
       links: [
-        'https://fonts.googleapis.com/css?family=Roboto',
-        {
-          href: '/apple-touch-icon.png',
-          rel: 'apple-touch-icon',
-          sizes: '180x180',
-        },
-        {
-          href: '/favicon-32x32.png',
-          rel: 'icon',
-          sizes: '32x32',
-          type: 'image/png',
-        },
-      ],
+      //  'https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic'
+      //   'https://fonts.googleapis.com/css?family=Roboto',
+
+      //   {
+      //     href: '/apple-touch-icon.png',
+      //     rel: 'apple-touch-icon',
+      //     sizes: '180x180',
+      //   },
+      //   {
+      //     href: '/favicon-32x32.png',
+      //     rel: 'icon',
+      //     sizes: '32x32',
+      //     type: 'image/png',
+      //   },
+      // ],
       // inlineManifestWebpackName: 'webpackManifest',
       // scripts: [
       // 'http://example.com/somescript.js',
@@ -84,7 +83,7 @@ module.exports = {
       //   src: '/myModule.js',
       //   type: 'module'
       // }
-      // ],
+      ],
       title: 'My App',
       window: {
         env: {
@@ -125,7 +124,19 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
-          'file-loader',
+          // {
+          //   loader: 'url-loader',
+          //   options: {
+          //     limit: 10000,
+          //   },
+          // },
+          {
+            loader: 'file-loader',
+            options: {
+              publicPath: '../../',
+              name: 'assets/fonts/[name].[ext]',
+            },
+          },
         ],
       },
       {

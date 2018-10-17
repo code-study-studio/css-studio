@@ -1,0 +1,11 @@
+@import '../../../styles/mixins';
+
+.logo {
+  width: rem(90px);
+  height: rem(137px);
+
+  img {
+    max-height:100%;
+    width: auto;
+  }
+}
