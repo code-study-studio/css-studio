@@ -115,7 +115,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              publicPath: '../../',
+              publicPath: './',
               name: 'assets/images/[name].[ext]',
             },
           },
@@ -133,7 +133,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              publicPath: '../../',
+              publicPath: './',
               name: 'assets/fonts/[name].[ext]',
             },
           },

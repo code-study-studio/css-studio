@@ -1,25 +1,6 @@
 @import 'mixins';
 @import 'fonts';
-
-// ----------------------------------- variable --------------------------------//
-  :root {
-    --color-header-layout: #FFFFFF;
-    --color-footer-layout: #C9F1F6;
-    --color-layout: #FDFDFD;
-    --color-layout-dark: #E2DEDE;
-    --color-logo: #B72E43;
-    --color-logo-dark: #8F121E;
-
-    --color-link: #000000;
-    --color-active-link: #f75408;
-
-    --font-title: 'PTSans_bold', sans-serif;
-    --font-subtitle: 'PTSans_bold', sans-serif;
-    --font-base: 'PTSerif', serif;
-  }
-
-// ------------------------------ base styles ---------------------------------//
-
+@import 'vars';
 
 html {
   @include desktop() {
@@ -53,7 +34,7 @@ body {
   min-width: 320px;
   margin: 0;
   padding: 0;
-  background-color: var(--color-layout);
+  background-color: $color-layout;
 
 }
 
