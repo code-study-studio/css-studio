@@ -10,13 +10,13 @@ type Props = {
 
 const PageTemplate = ({children}: Props) => (
   <div className={styles.wrapper}>
-    <Header/>
+    <Header />
     <main className={styles.main}>
       <div className={styles.container}>
         {children}
       </div>
     </main>
-    <Footer/>
+    <Footer />
   </div>
 );
 

@@ -4,40 +4,42 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './MainMenu.scss';
 
-type Props = {
-  // onLinkSelect: (id: number) => void,
-}
-
-const MainMenu = (props: Props) => (
+const MainMenu = () => (
   <nav className={styles.topmenu}>
     <NavLink
-      exact activeClassName={styles.active}
+      exact
+      activeClassName={styles.active}
       className={styles.link}
-      to='/' >
+      to='/'
+      >
       Home
     </NavLink>
     <NavLink
       activeClassName={styles.active}
       className={styles.link}
-      to='/about'>
+      to='/about'
+      >
       About
     </NavLink>
     <NavLink
       activeClassName={styles.active}
       className={styles.link}
-      to='/gallery'>
+      to='/gallery'
+      >
       Gallery
     </NavLink>
     <NavLink
       activeClassName={styles.active}
       className={styles.link}
-      to='/works'>
+      to='/works'
+      >
       Works
     </NavLink>
     <NavLink
       activeClassName={styles.active}
       className={styles.link}
-      to='/contacts'>
+      to='/contacts'
+      >
       Contacts
     </NavLink>
   </nav>

@@ -3,19 +3,40 @@
 exports[`MainMenu should render correctly 1`] = `
 <nav>
   <NavLink
-    activeClassName="menu__link menu__link--active"
+    activeClassName="active"
     aria-current="page"
     exact={true}
     to="/"
   >
-    [Home]
+    Home
   </NavLink>
   <NavLink
-    activeClassName="menu__link menu__link--active"
+    activeClassName="active"
     aria-current="page"
     to="/about"
   >
-    [About]
+    About
+  </NavLink>
+  <NavLink
+    activeClassName="active"
+    aria-current="page"
+    to="/gallery"
+  >
+    Gallery
+  </NavLink>
+  <NavLink
+    activeClassName="active"
+    aria-current="page"
+    to="/works"
+  >
+    Works
+  </NavLink>
+  <NavLink
+    activeClassName="active"
+    aria-current="page"
+    to="/contacts"
+  >
+    Contacts
   </NavLink>
 </nav>
 `;

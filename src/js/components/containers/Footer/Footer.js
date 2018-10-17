@@ -2,10 +2,7 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 
-type Props = {
-}
-
-const Footer = (props: Props) => (
+const Footer = () => (
   <header className={styles.footer}>
     <div className={styles.container}>
       footer

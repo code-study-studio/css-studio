@@ -7,6 +7,7 @@ type State = {
   hasError?: boolean,
   children?: ChildrenArray<*>,
 };
+
 type Props = {
   hasError?: boolean,
   children?: ChildrenArray<*>,
@@ -30,4 +31,5 @@ class ErrorBoundary extends Component<State, Props> {
     return this.props.children;
   }
 }
+
 export default ErrorBoundary;

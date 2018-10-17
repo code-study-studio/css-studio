@@ -1,7 +1,6 @@
 // @flow
 
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import { Route, Switch } from 'react-router-dom';
 import ErrorBoundary from '../containers/ErrorBoundary/ErrorBoundary';
 import Home from '../Home/Home';
@@ -9,10 +8,6 @@ import About from '../About/About';
 import Route404 from '../Route404/Route404';
 
 class App extends Component<{}> {
-
-  fn = () => {
-    return new Promise();
-  }
 
   render() {
     return (

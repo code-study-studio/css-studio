@@ -1,11 +1,7 @@
 import React from 'react';
 import PageTemplate from '../containers/PageTemplate/PageTemplate.js';
 
-type Props = {
-  // onLinkSelect: (id: number) => void,
-}
-
-const Route404 = (props: Props) => (
+const Route404 = () => (
   <PageTemplate>
     <section className='content'>
       <h1>404</h1>
