@@ -25,7 +25,8 @@
     "moduleNameMapper": {
       "\\.(svg|jpg|png)$": "<rootDir>/__mocks__/emptyModule.js",
       "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
-    }
+    },
+    "testEnvironment": "node"
   },
   "author": "Ivaschenko A",
   "license": "ISC",
@@ -36,7 +37,7 @@
     "babel-eslint": "^8.2.3",
     "babel-jest": "^22.4.3",
     "babel-loader": "^7.1.2",
-    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-flow": "^6.23.0",
