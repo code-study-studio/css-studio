@@ -30,14 +30,14 @@ module.exports = {
           name: 'vendors',
           chunks: 'all',
         },
-        // styles: {
-        //   name: 'styles',
-        //   test: /\.s?css$/,
-        //   chunks: 'all',
-        //   minChunks: 1,
-        //   reuseExistingChunk: true,
-        //   enforce: true,
-        // },
+        styles: {
+          name: 'styles',
+          test: /\.s?css$/,
+          chunks: 'all',
+          minChunks: 1,
+          reuseExistingChunk: true,
+          enforce: true,
+        },
       },
     },
   },
@@ -56,12 +56,13 @@ module.exports = {
       //   pageViewOnLoad: true
       // },
       meta: {
-        'description': {'content': 'A better default template for html-webpack-plugin.'}
+        description: {
+          content: 'A better default template for html-webpack-plugin.',
+        },
       },
       mobile: true,
       lang: 'en-US',
       links: [
-      //  'https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic'
       //   'https://fonts.googleapis.com/css?family=Roboto',
 
       //   {

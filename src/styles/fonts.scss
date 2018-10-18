@@ -1,23 +1,29 @@
 @font-face {
-    font-family: 'PTSans';
+    font-family: 'pt_serifregular';
+    src: local('pt_serifregular'), local('pt_serifregular'), 
+        url('../fonts/pt_serif-web-regular-webfont.woff2') format('woff2'),
+        url('../fonts/pt_serif-web-regular-webfont.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
-    font-weight: 400;
-    src: local('PTSans'), local('PTSans'),
-    url('../fonts/PT_Sans/PT_Sans-Web-Regular.ttf') format('truetype');
+
 }
 
 @font-face {
-    font-family: 'PTSans_bold';
+    font-family: 'pt_sansregular';
+    src: local('pt_sansregular'), local('pt_sansregular'), 
+        url('../fonts/pt_sans-web-regular-webfont.woff2') format('woff2'),
+        url('../fonts/pt_sans-web-regular-webfont.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
-    font-weight: 700;
-    src: local('PTSans_bold'),
-    url('../fonts/PT_Sans/PT_Sans-Web-Bold.ttf') format('truetype');
+
 }
 
 @font-face {
-    font-family: 'PTSerif';
+    font-family: 'pt_sansbold';
+    src: local('pt_sansbold'), local('pt_sansbold'),
+        url('../fonts/pt_sans-web-bold-webfont.woff2') format('woff2'),
+        url('../fonts/pt_sans-web-bold-webfont.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
-    font-weight: 700;
-    src: local('PTSerif'),
-    url('../fonts/PT_Serif/PT_Serif-Web-Regular.ttf') format('truetype');
+
 }
