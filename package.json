@@ -13,7 +13,8 @@
     "test": "jest test --all --no-cache",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:one": "jest -t 'content'"
+    "test:one": "jest -t 'content'",
+    "freshtall": "rm -rf node_modules && rm -rf package-lock.json && npm install"
   },
   "jest": {
     "setupFiles": [
