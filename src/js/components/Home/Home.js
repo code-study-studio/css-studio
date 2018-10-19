@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import PageTemplate from '../containers/PageTemplate/PageTemplate.js';
+import PageTemplate from '../../containers/PageTemplate/PageTemplate.js';
 
 const Home = () => (
   <PageTemplate>

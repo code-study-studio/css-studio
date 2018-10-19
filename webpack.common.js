@@ -14,7 +14,7 @@ module.exports = {
   output: {
     filename: 'assets/scripts/[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
-    //publicPath: '/'
+    // publicPath: '/'
   },
   optimization: {
     runtimeChunk: 'single',
@@ -44,6 +44,7 @@ module.exports = {
   resolve: {
     extensions: ['.jsx', '.js', '.json'],
   },
+  mode: devMode ? 'development' : 'production',
   plugins: [
     new HtmlWebpackPlugin({
       inject: false,
@@ -114,9 +115,10 @@ module.exports = {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
-              publicPath: './',
+              limit: 10000,
+              // publicPath: '../../',
               name: 'assets/images/[name].[ext]',
             },
           },
@@ -125,19 +127,21 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
-          // {
-          //   loader: 'url-loader',
-          //   options: {
-          //     limit: 10000,
-          //   },
-          // },
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
-              publicPath: './',
+              limit: 10000,
+              publicPath: '../../',
               name: 'assets/fonts/[name].[ext]',
             },
           },
+          // {
+          //   loader: 'file-loader',
+          //   options: {
+          //     publicPath: '../../',
+          //     name: 'assets/fonts/[name].[ext]',
+          //   },
+          // },
         ],
       },
       {

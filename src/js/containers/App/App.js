@@ -3,27 +3,27 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
-import ErrorBoundary from '../containers/ErrorBoundary/ErrorBoundary';
+import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
 const Loading = () => <div>Loading...</div>;
 
 const Home = Loadable({
-  loader: () => import('../Home/Home'),
+  loader: () => import('../../components/Home/Home'),
   loading: Loading,
 });
 
 const About = Loadable({
-  loader: () => import('../About/About'),
+  loader: () => import('../../components/About/About'),
   loading: Loading,
 });
 
 const Route404 = Loadable({
-  loader: () => import('../Route404/Route404'),
+  loader: () => import('../../components/Route404/Route404'),
   loading: Loading,
 });
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename='/css-studio'>
     <ErrorBoundary>
       <Switch>
         <Route exact path='/' component={Home} />

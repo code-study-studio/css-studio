@@ -1,7 +1,8 @@
-@import '../../../../styles/mixins';
+@import '../../../styles/mixins';
+@import '../../../styles/vars';
 
 .footer {
-  background-color: var(--color-footer-layout);
+  background-color: $color-footer-layout;
 }
 
 .container {

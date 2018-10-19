@@ -2,7 +2,7 @@
 import React from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import styles from './PageTemplate.module.scss';
+import styles from './PageTemplate.scss';
 
 type Props = {
   children: React.ChildrenArray<React.Element>
