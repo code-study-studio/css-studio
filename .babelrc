@@ -8,11 +8,12 @@
     }],
     "react",
     "stage-0",
-    "flow",
+    "flow"
   ],
   "retainLines": true,
   "plugins": [
-    "transform-class-properties"
+    "transform-class-properties",
+    "dynamic-import-node"
   ],
   "env": {
     "test": {

@@ -9,6 +9,7 @@ script:
 
 deploy:
   provider: pages
+  skip_cleanup: false
   github_token: $h
   local_dir: dist
   target_branch: master
