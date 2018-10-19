@@ -17,7 +17,7 @@ const MainMenu = () => (
     <NavLink
       activeClassName={styles.active}
       className={styles.link}
-      to='about'
+      to='/about'
       >
       About
     </NavLink>
@@ -38,7 +38,7 @@ const MainMenu = () => (
     <NavLink
       activeClassName={styles.active}
       className={styles.link}
-      to='./contacts'
+      to='/contacts'
       >
       Contacts
     </NavLink>
