@@ -13,7 +13,7 @@ exports[`MainMenu should render correctly 1`] = `
   <NavLink
     activeClassName="active"
     aria-current="page"
-    to="about"
+    to="/about"
   >
     About
   </NavLink>
@@ -34,7 +34,7 @@ exports[`MainMenu should render correctly 1`] = `
   <NavLink
     activeClassName="active"
     aria-current="page"
-    to="./contacts"
+    to="/contacts"
   >
     Contacts
   </NavLink>
