@@ -22,8 +22,10 @@ const Route404 = Loadable({
   loading: Loading,
 });
 
+// basename='/css-studio'
+
 const App = () => (
-  <BrowserRouter basename='/css-studio'>
+  <BrowserRouter>
     <ErrorBoundary>
       <Switch>
         <Route exact path='/' component={Home} />
