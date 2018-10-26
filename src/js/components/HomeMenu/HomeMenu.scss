@@ -10,6 +10,8 @@
   @include centered();
   max-width: rem(550px);
   max-height: rem(550px);
+  padding: 0;
+  list-style: none;
 }
 
 .list_direct {
@@ -26,4 +28,32 @@
   position: absolute;
   border: 1px solid #b9f;
   border-radius: 100%;
+}
+
+.link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: green;
+}
+
+.link:before {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' className='svg-elem animated infinite slow rotateInBack' width='60' height='60' viewport='100, 100' %3E%3Ccircle width='60' height='60' className='svg-circle' cx='30' cy='30' r='26' fill='none' stroke-dasharray='25, 15' stroke='%23d7d4f0' stroke-width='4' /%3E%3C/svg%3E");
+}
+
+.link:hover:before {
+  display: block;
+}
+
+.label {
+  
 }

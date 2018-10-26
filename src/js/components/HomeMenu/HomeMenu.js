@@ -19,25 +19,8 @@ const linksList = (data) => {
     const {id, to, label} = link;
     return (
       <li className={styles.list__elem} key={id}>
-        <Link href='/' to={to}>
-          <svg
-            className='svg-elem animated infinite slow rotateInBack'
-            width='60'
-            height='60'
-            viewport='100, 100'
-            >
-            <circle
-              width='60'
-              height='60'
-              className='svg-circle'
-              cx='30'
-              cy='30'
-              r='26'
-              fill='none'
-              strokeDasharray='25, 15'
-            />
-          </svg>
-          <span>{label}</span>
+        <Link className={styles.link} href='/' to={to}>
+          <span className={styles.label}>{label}</span>
         </Link>
       </li>
     );
