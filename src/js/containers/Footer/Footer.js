@@ -3,11 +3,11 @@ import React from 'react';
 import styles from './Footer.scss';
 
 const Footer = () => (
-  <header className={styles.footer}>
+  <footer className={styles.footer}>
     <div className={styles.container}>
       footer
     </div>
-  </header>
+  </footer>
 );
 
 export default Footer;

@@ -3,6 +3,8 @@
 
 .footer {
   background-color: $color-footer-layout;
+  min-height: rem(40px);
+  padding: rem(5px) 0;
 }
 
 .container {
